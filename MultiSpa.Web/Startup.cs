@@ -66,7 +66,7 @@ namespace MultiSpa.Web
             }
 
             app.UseStaticFiles();
-            app.UseSpaStaticFiles();
+            //app.UseSpaStaticFiles();
 
             app.UseAuthentication();
 
@@ -79,7 +79,7 @@ namespace MultiSpa.Web
 
             app.Map(new PathString("/members"), appRenewals =>
             {
-                //      appRenewals.UseSpaStaticFiles();
+                appRenewals.UseSpaStaticFiles();
                 appRenewals.UsePathBase(new PathString("/members"));
                 appRenewals.UseSpa(spa =>
                 {
